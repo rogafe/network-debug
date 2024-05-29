@@ -8,6 +8,10 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    
 
     steps:
       # Checkout the repository
@@ -30,4 +34,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ghcr.io/${{ github.repository }}/${{ github.event.repository.name }}:latest
+          tags: ghcr.io/${{ github.repository }}:latest
