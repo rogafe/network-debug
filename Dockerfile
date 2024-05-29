@@ -2,6 +2,6 @@
 
 FROM alpine:latest
 
-RUN apk add --no-cache dig drill ping curl wget netcat-openbsd nmap tcpdump iperf iperf3
+RUN apk add --no-cache drill curl wget netcat-openbsd nmap tcpdump iperf iperf3 bash
 
-CMD ["/bin/sh"]
+CMD ["/bin/bash"]
